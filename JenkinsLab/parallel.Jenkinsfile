@@ -20,10 +20,8 @@ pipeline{
 
     stages{
         agent{
-            node{
                 label ${params.jenkins_label}
         }
-    }
         stage('Sequential Stage1'){
             steps{
                 echo "Sequential Stage 1"
