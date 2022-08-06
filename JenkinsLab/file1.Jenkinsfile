@@ -9,9 +9,13 @@ pipeline{
         stage("Create Folders"){
             steps{
                 sh '''
+                    #! /bin/bash
+
                     cd /data3/
+                    echo "inside data3"
                     namespace_dir=("namespace1/configs" "namespace2/configs")
                     echo "${namespace_dir[0]}"
+
                     for i in {0..${#namespace_dir[@]}..1}
                       do
                         if -d ${namespace_dir[i]}
