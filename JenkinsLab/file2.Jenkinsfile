@@ -32,7 +32,7 @@ pipeline{
                 echo "${params.PASSWORD}"
             }
             input{
-                message:"You want to proceed to next stage??"
+                message "You want to proceed to next stage??"
             }
         }
         stage('Next Stage'){
