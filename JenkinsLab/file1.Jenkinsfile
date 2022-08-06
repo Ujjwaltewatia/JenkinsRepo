@@ -2,6 +2,7 @@ pipeline{
     agent any
     stages{
         stage("Create Folders"){
+            steps{
             step{
                 sh '''
                     cd /data3/
@@ -9,6 +10,7 @@ pipeline{
                     echo "Directories created"
 
                 '''
+            }
             }
         }
     }
