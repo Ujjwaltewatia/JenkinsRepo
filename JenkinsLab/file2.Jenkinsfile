@@ -15,7 +15,7 @@ pipeline{
     }
     agent{
         node{
-            label ${params.node-label}
+            label '${params.node-label}'
         }
     }
     stages{
@@ -26,6 +26,7 @@ pipeline{
         }
         stage('Print Params'){
             steps{
+                echo "${params.node-label}"
                 echo "${params.PERSON}"
                 echo "${params.BIOGRAPHY}"
                 echo "${params.TOGGLE}"
