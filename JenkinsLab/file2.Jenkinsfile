@@ -15,7 +15,7 @@ pipeline{
     }
     agent{
         node{
-            label '${params.node-label}'
+            label 'master'
         }
     }
     stages{
