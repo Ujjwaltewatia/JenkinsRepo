@@ -13,6 +13,7 @@ pipeline{
 
                     cd /data3/
                     echo "inside data3"
+                    arr=(prakhar ankit 1 rishabh manish abhinav)
                     namespace_dir=("namespace1/configs" "namespace2/configs")
                     echo "${namespace_dir[0]}"
 
