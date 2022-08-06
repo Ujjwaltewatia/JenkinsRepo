@@ -30,11 +30,11 @@ pipeline{
                 echo "${params.TOGGLE}"
                 echo "${params.CHOICE}"
                 echo "${params.PASSWORD}"
-            }
-            input{
+            }   
+        }
+        input{
                 message "You want to proceed to next stage??"
             }
-        }
         stage('Next Stage'){
             steps{
                 echo "Next Stage"
