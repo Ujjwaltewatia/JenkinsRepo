@@ -2,7 +2,6 @@
 
 pipeline{
     parameters {
-        string(name: 'node-label', defaultValue: 'master', description: 'Where should this pipeline run')
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
@@ -26,7 +25,6 @@ pipeline{
         }
         stage('Print Params'){
             steps{
-                echo "${params.node-label}"
                 echo "${params.PERSON}"
                 echo "${params.BIOGRAPHY}"
                 echo "${params.TOGGLE}"
