@@ -35,6 +35,7 @@ pipeline{
         stage('Next Stage'){
             input{
                 message "You want to proceed to next stage??"
+                ok "Yes Proceed"
             }
             steps{
                 echo "Next Stage"
