@@ -19,15 +19,19 @@ pipeline{
     }
 
     stages{
+
+        stage('Sequential Stage1'){
         agent{
                 label ${params.jenkins_label}
         }
-        stage('Sequential Stage1'){
             steps{
                 echo "Sequential Stage 1"
             }
         }
         stage('Sequential Stage2'){
+        agent{
+                label ${params.jenkins_label}
+        }
             steps{
                 echo "Sequential Stage 2"
             }
