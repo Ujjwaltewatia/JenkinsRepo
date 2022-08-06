@@ -6,7 +6,7 @@ namespace_dir=("namespace1/configs" "namespace2/configs")
 echo "${namespace_dir[0]}"
 for folder in ${namespace_dir[@]}
     do
-        if -d $folder
+        if [ -d $folder ];
         then
             echo "Directory $folder Already Exists"
         else
