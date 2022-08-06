@@ -31,6 +31,14 @@ pipeline{
                 echo "${params.CHOICE}"
                 echo "${params.PASSWORD}"
             }
+            input{
+                message:"You want to proceed to next stage??"
+            }
+        }
+        stage('Next Stage'){
+            steps{
+                echo "Next Stage"
+            }
         }
     }
 }
