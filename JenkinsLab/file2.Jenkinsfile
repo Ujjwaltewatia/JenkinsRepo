@@ -27,7 +27,9 @@ pipeline{
             steps{
                 echo "${params.PERSON}"
                 echo "${params.BIOGRAPHY}"
-                echo "${params.TOGGLE}"
+                if ($(params.TOGGLE)==true){
+                    System.out.println("Toggle value is True")
+                }
                 echo "${params.CHOICE}"
                 echo "${params.PASSWORD}"
             }
