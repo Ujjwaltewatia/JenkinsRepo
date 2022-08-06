@@ -10,8 +10,18 @@ pipeline{
             steps{
                 sh '''
                     cd /data3/
-                    mkdir -p namespace1/configs namespace2/configs
-                    echo "Directories created"
+                    namespace_dir=(namespace1/configs namespace2/configs)
+                    
+                    for i in {0..${#namespace_dir[@]}..1}
+                      do
+                        if -d ${namespace_dir[i]}
+                          then
+                            echo "Directory Already Exists"
+                        else
+                          mkdir -p namespace1/configs namespace2/configs
+                          echo "Directory ${namespace_dir[i]} created"
+                        fi
+                    done
 
                 '''
             }
