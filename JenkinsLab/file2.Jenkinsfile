@@ -36,10 +36,11 @@ pipeline{
             input{
                 message "You want to proceed to next stage??"
                 ok "Yes Proceed"
-            }
             parameters {
                 string(name: 'Generate Json', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
             }
+            }
+
             steps{
                 echo "Next Stage"
             }
