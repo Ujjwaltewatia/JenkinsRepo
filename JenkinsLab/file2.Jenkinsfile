@@ -27,7 +27,7 @@ pipeline{
             steps{
                 echo "${params.PERSON}"
                 echo "${params.BIOGRAPHY}"
-                if ($(params.TOGGLE)==true){
+                if (${params.TOGGLE}==true){
                     System.out.println("Toggle value is True")
                 }
                 echo "${params.CHOICE}"
