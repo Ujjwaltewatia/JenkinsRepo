@@ -12,7 +12,7 @@ pipeline{
                     pwd
                     ls -la
                     chmod +x scripts/createfolder.sh
-                    sh scripts/createfolder.sh
+                    ./scripts/createfolder.sh
                 '''
             }
         }

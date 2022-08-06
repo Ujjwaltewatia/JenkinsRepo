@@ -4,11 +4,11 @@ cd /data3/
 echo "inside data3"
 namespace_dir=("namespace1/configs" "namespace2/configs")
 echo "${namespace_dir[0]}"
-for i in {0..${#namespace_dir[@]}..1}
+for folder in ${namespace_dir[@]}
     do
-        if -d ${namespace_dir[i]}
+        if -d $folder
         then
-            echo "Directory Already Exists"
+            echo "Directory $folder Already Exists"
         else
             mkdir -p namespace1/configs namespace2/configs
             echo "Directory ${namespace_dir[i]} created"
