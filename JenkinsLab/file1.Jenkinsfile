@@ -1,7 +1,7 @@
 pipeline{
     agent any
     options{
-        buildDiscarder(logRotator(numToKeepStr: '4')) }
+        buildDiscarder(logRotator(numToKeepStr: '4'))
     }
     stages{
         stage("git checkout"){
