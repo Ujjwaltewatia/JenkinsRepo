@@ -1,7 +1,7 @@
 pipeline{
     agent {
         node{
-            labels 'master'
+            label 'master'
         }
     }
     options{
