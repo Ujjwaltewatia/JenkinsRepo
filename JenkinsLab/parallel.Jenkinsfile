@@ -1,7 +1,7 @@
 
 pipeline{
-    node{
-        agent{
+    agent{
+        node{
             label 'master'
         }
     }
@@ -19,8 +19,8 @@ pipeline{
     }
 
     stages{
-        node{
-            agent{
+        agent{
+            node{
                 label ${params.jenkins_label}
         }
     }
