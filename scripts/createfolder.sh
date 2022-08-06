@@ -9,6 +9,7 @@ for folder in ${namespace_dir[@]}
         if [ -d $folder ];
         then
             echo "Directory $folder Already Exists"
+            echo "skipping creation of $folder"
         else
             mkdir -p namespace1/configs namespace2/configs
             echo "Directory ${namespace_dir[i]} created"
