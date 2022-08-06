@@ -9,8 +9,7 @@ pipeline{
         stage("Create Folders"){
             steps{
                 sh '''
-                    #! /bin/bash
-                    ll
+                    ls -la
                     cd /data3/
                     echo "inside data3"
                     arr=(prakhar ankit 1 rishabh manish abhinav)
