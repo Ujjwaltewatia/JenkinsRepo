@@ -10,8 +10,8 @@ pipeline{
             steps{
                 sh '''
                     cd /data3/
-                    namespace_dir=(namespace1/configs namespace2/configs)
-                    
+                    namespace_dir=("namespace1/configs" "namespace2/configs")
+                    echo "${namespace_dir[0]}"
                     for i in {0..${#namespace_dir[@]}..1}
                       do
                         if -d ${namespace_dir[i]}
