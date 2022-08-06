@@ -22,7 +22,7 @@ pipeline{
 
         stage('Sequential Stage1'){
         agent{
-                label ${params.jenkins_label}
+                label "${params.jenkins_label}"
         }
             steps{
                 echo "Sequential Stage 1"
@@ -30,7 +30,7 @@ pipeline{
         }
         stage('Sequential Stage2'){
         agent{
-                label ${params.jenkins_label}
+                label "${params.jenkins_label}"
         }
             steps{
                 echo "Sequential Stage 2"
