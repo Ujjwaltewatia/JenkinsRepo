@@ -5,7 +5,7 @@ pipeline{
             steps{
                 checkout scm
             }
-        },
+        }
         stage("Create Folders"){
             steps{
                 sh '''
