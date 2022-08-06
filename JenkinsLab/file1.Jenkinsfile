@@ -10,7 +10,7 @@ pipeline{
             steps{
                 sh '''
                     #! /bin/bash
-
+                    ll
                     cd /data3/
                     echo "inside data3"
                     arr=(prakhar ankit 1 rishabh manish abhinav)
