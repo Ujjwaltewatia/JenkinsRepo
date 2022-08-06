@@ -9,6 +9,7 @@ pipeline{
         stage("Create Folders"){
             steps{
                 sh '''
+                    pwd
                     ls -la
                     cd /data3/
                     echo "inside data3"
