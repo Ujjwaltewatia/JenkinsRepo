@@ -5,7 +5,7 @@ pipeline{
             steps{
                 sh '''
                     cd /data3/
-                    mkdir -pf namespace1/configs namespace2/configs
+                    mkdir -p namespace1/configs namespace2/configs
                     echo "Directories created"
 
                 '''
