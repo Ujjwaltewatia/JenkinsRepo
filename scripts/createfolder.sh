@@ -1,7 +1,9 @@
 #!/bin/bash
-
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo "$script_dir"
 cd /data3/
 echo "inside data3"
+echo ""
 namespace_dir=("namespace1/configs" "namespace2/configs")
 echo "${namespace_dir[0]}"
 for folder in ${namespace_dir[@]}
